@@ -6,6 +6,7 @@
 
 # 显示时间
     select now();
+    
 # 显示版本
     select version();
 
