@@ -12,13 +12,13 @@
 
 # between ... and ...表示在什么范围之内  属于连续问题查询
     # 在什么范围
-    select name from studuent where age between 12 and 34;
+    select name, age from studuent where age between 12 and 34;
 
     # 不再范围
     select name, age from studuent where age not between 12 and 34;
     select name, age from studuent where not age between 12 and 34;       # not ... between ... and 是一种语法
 
-    select name from studuent where age not (between 12 and 34); # 语法错误
+    select name, age from studuent where age not (between 12 and 34);       # 语法错误
 
 
 # 判断空 is null

@@ -28,7 +28,7 @@
 
     #3. 模糊查询（进行匹配 所以效率低）
         # like
-            -- % 替换一个或者多个
+            -- % 替换零个或者多个
             -- _ 替换一个
 
             # eg:查询姓名以小开头的信息
@@ -43,10 +43,14 @@
                 select * from studuent where name like "__%";
 
         # rlike (正则表达式)
-            # 查询以周开始的信息
+            # 查询以小开始的信息
             select * from studuent where name rlike "^小.*";
 
-            # 查询已周开始 伦结束的信息
-            select * from studuent where name rlike "^小.*九$"
+            # 查询已小开始 九结束的信息
+            select * from studuent where name rlike "^小*九$"
+            select * from studuent where name regexp "^小*九$"
+
+            select * from studuent where name regexp "一"
+
 
 
